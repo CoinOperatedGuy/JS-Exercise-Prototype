@@ -50,9 +50,12 @@ Person.prototype.eat = function(someFood) {
     }
 }
 Person.prototype.poop = function() {
-        if (this.stomach.length === 10) {
-            this.stomach = [];
-        }
+    if (this.stomach.length === 10) {
+        this.stomach = [];
+    }
+}
+Person.prototype.toString = function() {
+        return `${this.name}, ${this.age}`;
     }
     /*
       TASK 2
@@ -99,6 +102,7 @@ function Baby(name, age, favoriteToy) {
     this.age = age;
     this.favoriteToy = favoriteToy;
 }
+Baby.prototype = Object.create(Person.prototype)
 Baby.prototype.play = function() {
         return `Playing with ${this.favoriteToy}`;
     }
