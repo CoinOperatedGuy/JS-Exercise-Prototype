@@ -72,6 +72,8 @@ Person.prototype.toString = function() {
     */
 
 function Car(model, milesPerGallon) {
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
     this.tank = 0;
     this.odometer = 0;
 }
@@ -110,10 +112,10 @@ Baby.prototype.play = function() {
       TASK 4
 
       In your own words explain the four principles for the "this" keyword below:
-      1. 
-      2. 
-      3. 
-      4. 
+      1. Default binding is the most common and it calls the standalone function invocation.
+      2. Implicit binding is when the object that is before the dot (.) is what 'this' keyword will be bound to.
+      3. Explicit binding is when you force a function call to use a particular object for 'this' binding, without putting a property function reference on the object. 
+      4. New binding refers to when a function is called with a 'new' operator, three things happen: 1. An empty object is created and referenced by this variable, inheriting the prototype of the function. 2. Properties and methods are added to the object referenced by 'this'. 3. The newly created object referenced by 'this' is returned at the end implicitly as long as no other object was returned explicitly.
     */
 
 
